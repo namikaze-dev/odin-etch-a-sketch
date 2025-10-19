@@ -29,11 +29,11 @@ const drawCanvas = () => {
       box.style.minHeight = `${boxHeight}px`;
       boxRow.appendChild(box);
 
-      box.addEventListener("mouseenter", () => {
+      box.addEventListener("pointermove", () => {
         box.style.backgroundColor = randomColor ? getRandomColor() : color;
         box.style.opacity = box.style.opacity ? Number(box.style.opacity) + 0.1 : 0.1;
       });
-      box.addEventListener("mouseleave", () => {
+      box.addEventListener("pointermove", () => {
         box.style.backgroundColor = randomColor ? getRandomColor() : color;
       });
     }
